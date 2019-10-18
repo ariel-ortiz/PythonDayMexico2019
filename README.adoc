@@ -1,0 +1,28 @@
+= Combinaciones, permutaciones y otras diversiones
+
+En este repositorio se encuentra el código fuente desarrollado para la correspondiente plática impartida durante el https://pythondaymx.github.io/[PythonDay México 2019].
+
+Las diapositivas de la plática están disponibles en: http://bit.ly/2MgEdDs[bit.ly/2MgEdDs]
+
+== Resumen
+
+Cuando se estudia probabilidad es común hablar de ciertas agrupaciones conocidas como combinaciones y permutaciones. En esta plática mostraré el poder y la elegancia de las listas por comprensión con el fin de diseñar e implementar funciones en Python que permitan generar este tipo de agrupaciones.
+
+== Descripción de la plática
+
+Supongamos que tenemos los siguientes dos problemas:
+
+- Estoy en una heladería y quiero comprar un cono con dos bolas de helado de sabores distintos. La heladería cuenta con los siguientes sabores de helado: chocolate, fresa, nuez y vainilla. ¿De qué maneras diferentes puedo escoger los dos sabores de mi cono? 
+- Tenemos las siguientes tres letras: `i`, `o`, `r`. ¿Qué palabras podemos formar usando solamente esas tres letras?  Supongamos que no nos importa que algunas de las palabras formadas no existan en el idioma español. 
+
+El problema de los helados es un problema de _combinaciones_: deseamos determinar las formas de agrupar los elementos de un conjunto en donde no importa el orden en que se colocan dichos elementos. Un cono con helado de fresa y chocolate lo consideramos igual a uno con chocolate y fresa. Por otro lado, el problema de las letras es un problema de _permutaciones_: a diferencia de las combinaciones, aquí el orden sí nos interesa. No es lo mismo “rio” que “oir”.
+
+Tradicionalmente, muchos libros de probabilidad comienzan con una descripción de cómo calcular el número de combinaciones y permutaciones de un cierto conjunto de objetos. No obstante, si lo que nos interesa es obtener un listado con dichas agrupaciones es muy probable que estos libros no expliquen la manera de hacerlo. Python cuenta con el módulo `itertools`, el cual provee los mecanismos necesarios para generar todo este tipo de agrupaciones. Aún así, resulta muy interesante diseñar e implementar por nuestra cuenta los algoritmos correspondientes, los cuales pueden emplear de manera muy ilustrativa las listas por comprensión (_list comprehensions_) de Python.
+
+En esta plática se mostrará la manera de diseñar incrementalmente los algoritmos para producir tres diferentes tipos de agrupaciones:
+
+- Comenzamos con el **conjunto potencia**: a partir de un conjunto dado, ¿cuáles son todos sus subconjuntos?
+- Luego siguen las **combinaciones** tomando _n_ objetos a la vez: a partir del resultado del punto anterior, seleccionamos solamente los subconjuntos que sean de tamaño _n_.
+- Finalmente, calculamos las **permutaciones** tomando _n_ objetos a la vez: reordenamos de todas las maneras posibles los objetos de cada subconjunto obtenido de las combinaciones de tamaño _n_ del punto anterior.
+
+Al finalizar la plática el público asistente tendrá una idea general de cómo emplear las listas por comprensión de Python para resolver problemas comunes de matemática combinatoria.
